@@ -28,8 +28,8 @@ void setup() {
     while (1);
   }
   ads.setGain(GAIN_TWOTHIRDS);
-  analogInput.slope = 0.002288;   
-  analogInput.intercept = -50.0;  
+  analogInput.slope = 0.004888;     //suhu normal
+  analogInput.intercept = -185.711; //suhu normal
 }
 
 void loop() {
@@ -60,7 +60,7 @@ void readSensors() {
   Serial.print(" | m: "); 
   Serial.print(m, 6); // High precision for small slope
   Serial.print(" c: "); 
-  Serial.print(c, 2);
+  Serial.print(c, 3);
   Serial.print(" | Temp: "); 
   Serial.print(analogInput.tempValue, 2); 
   Serial.println(" C");
